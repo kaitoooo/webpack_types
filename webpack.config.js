@@ -41,7 +41,8 @@ module.exports = {
     // モジュールの解決方法を指定
     resolve: {
         modules: [src, 'node_modules'],
-        extensions: ['.js'],
+        // 拡張子を配列で指定
+        extensions: ['.ts', '.js'],
     },
     module: {
         rules: [
