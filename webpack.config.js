@@ -20,7 +20,7 @@ module.exports = {
     context: src,
     // メインのJSファイル
     entry: {
-        app: './js/app.ts',
+        app: './scripts/app.ts',
     },
     // ファイルの出力設定
     output: {
