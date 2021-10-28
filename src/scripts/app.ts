@@ -1,4 +1,4 @@
-import '../style/style.scss';
+import '../styles/style.scss';
 import picturefill from 'picturefill';
 picturefill();
 import smoothScroll from 'smooth-scroll';
