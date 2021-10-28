@@ -1,12 +1,7 @@
-// tablet
-@mixin tablet {
-    @media all and (min-width: $break-point-mobile + 1px) and (max-width: $break-point-tablet) {
-        @content;
-    }
-}
-// sp
-@mixin sp {
-    @media all and (max-width: $break-point-sp) {
+@use '../setting/size';
+
+@mixin mq($breakpoint) {
+    @media all and (max-width: map-get(size.$breakpoints, $breakpoint)) {
         @content;
     }
 }
