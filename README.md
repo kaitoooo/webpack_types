@@ -1,31 +1,15 @@
-# キャッシュ削除
+## Build Setup
 
-npm cache clean
+```bash
+# install dependencies
+$ npm install
 
-# 脆弱性のあるパッケージを修正
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-npm audit fix
+# build for production and launch server
+$ npm run build
 
-# package.json に書かれているすべてのパッケージをインストールする
-
-npm install
-
-# 生成コマンド
-
-npm run build
-
-# 開発コマンド
-
-npm run dev
-
-# swiper インストール
-
-npm install swiper --save-dev
-
-# vue インストール
-
-npm install vue vue-loader vue-template-compiler --save-dev
-
-# キャッシュパラメータ付与
-
-<%= htmlWebpackPlugin.options.cacheParam %>
+# generate static project
+$ npm run build
+```
