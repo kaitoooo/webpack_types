@@ -1,11 +1,21 @@
-module.exports = {
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
+const config = {
+    root: true,
     env: {
-        browser: true, // ブラウザで実行されるコードを検証
-        es6: true, // ES6で書かれたコードを検証
+        browser: true,
+        node: true,
     },
+    parser: '@typescript-eslint/parser',
     parserOptions: {
-        sourceType: 'module', // ES Modules機能を有効
-        ecmaVersion: 2015, // ECMAScript 2015
+        sourceType: 'module',
+        ecmaVersion: 2020,
     },
-    extends: ['plugin:prettier/recommended'],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
+    ],
 };
+
+module.exports = config;
