@@ -1,8 +1,20 @@
-module.exports = {
-    semi: true, // ステートメントの最後にセミコロンをつける
-    printWidth: 300, // 自動折返し文字数
-    tabWidth: 4, // タブ
-    singleQuote: true, // 二重引用符の代わりに単一引用符を使用
-    trailingComma: 'es5', // 末尾にカンマを設定
-    endOfLine: 'auto', // 改行の文字コードを指定
+/** @type {import('prettier').Options} */
+const config = {
+    semi: true,
+    singleQuote: true,
+    tabWidth: 4,
+    trailingComma: 'es5',
+    useTabs: false,
+    printWidth: 200,
+    endOfLine: 'auto',
+    overrides: [
+        {
+            files: ['*.json'],
+            options: {
+                tabWidth: 2,
+            },
+        },
+    ],
 };
+
+module.exports = config;
